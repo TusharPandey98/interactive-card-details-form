@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+    --error: hsl(0, 100%, 66%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.dsp__none {
+    display: none;
+}
+
+.dsp__hidden {
+    visibility: hidden;
+}
+
+.error {
+    color: var(--error);
+    font-size: 12px;
+}
+
+/**
+card css
+*/
+.card__background {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.card__side {
+    width: 100%;
+    position: relative;
+    color: white;
+}
+
+/* //card front side css start */
+.card__front__side {
+    position: absolute;
+    left: 1rem;
+    bottom: -4rem;
+    z-index: 1;
+    color: white;
+}
+
+.card__logo {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
+.card__number {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    gap: 10px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.name__and__exp {
+    position: absolute;
+    padding: 1rem;
+    left: 0;
+    right: 0;
+    bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.card__front__side .front__bg {
+    width: 300px;
+    height: 200px;
+    left: 1rem;
+    bottom: -2rem;
+    z-index: 1;
+}
+
+/* card front side end */
+
+/* card back side css start */
+.card__back__side {
+    position: absolute;
+    right: 1rem;
+    top: 3rem;
+}
+
+.card__back__side img {
+    /* position: absolute; */
+    /* width:80%; */
+    width: 300px;
+    height: 200px;
+    /* width: 378px;
+    height: 207px; */
+
+}
+
+.card__back__side .cvc__number {
+    position: absolute;
+    top: 48%;
+    right: 14%;
+    transform: translateY(-48%);
+    letter-spacing: 2px;
+}
+
+/* card back side css end */
+
+.form__details__side,
+.thankyou__container {
+    padding: 50px 16px 30px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.form__details__side.dsp__none {
+    display: none;
+}
+
+.thankyou__container.dsp__none {
+    display: none;
+}
+
+
+.form__details__side form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card__btn {
+    width: 100%;
+    text-transform: capitalize;
+    padding: 1rem 3rem;
+    background-color: var(--very-dark-violet);
+    color: var(--light-grayish-violet);
+    border-radius: 10px;
+    margin-top: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+form label {
+    text-transform: uppercase;
+    color: var(--very-dark-violet);
+    font-weight: 700;
+}
+
+form input {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--dark-grayish-violet);
+    padding-left: 12px;
+    cursor: pointer;
+}
+
+form input:focus-visible {
+    outline: none;
+}
+
+form input:active {
+    border: 2px solid var(--linear-gradient);
+}
+
+form input:focus {
+    border: 2px solid black;
+}
+
+form input.input__error {
+    border: 2px solid var(--error);
+}
+
+.date__and__cvc {
+    display: flex;
+    gap: 8px;
+}
+
+.expiry__date {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card__cvc {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 40%;
+}
+
+.expiry__date__inputs {
+    display: flex;
+    gap: 8px;
+}
+
+.expiry__date {
+    width: 60%;
+}
+
+.expiry__date__inputs input {
+    width: 50%;
+}
+
+/* thankyou section */
+.thankyou__component {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.thankyou__msg {
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+}
+
+.thankyou__subtitle {
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: gray;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width:992px) {
+    body {
+        height:100vh;
+        overflow: hidden;
+    }
+    .container {
+        flex-direction: row;
+    }
+
+    .card__side {
+        width: 30%;
+        height: 100%;
+    }
+
+    .card__background {
+        height: 100vh;
+    }
+
+    /* card front side */
+    .card__front__side {
+        top: 15%;
+        right: -20%;
+        bottom: auto;
+        left: auto;
+    }
+
+    .card__front__side .front__bg{
+        width: 350px;
+        height: 200px;
+    }
+  
+    /* card back side */
+
+    .card__back__side {
+        right: -40%;
+        top: 50%;
+    }
+
+    .card__back__side img{
+        width: 350px;
+        height: 200px;
+    }
+
+    form {
+        max-width: 400px;
+    }
+
+    .form__details__side,
+    .thankyou__container {
+        width: 70%;
+        margin-left: 4rem;
+        margin-top: 0;
+    }
+
+    .card__cvc {
+        width: 50%;
+    }
+
+    .expiry__date {
+        width: 50%;
+    }
+
+    .thankyou__component {
+        width: 55%;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+/* @media (max-width:992px) {
+    body{
+        background-color: green;
+    }
+    /* .form__details__side{
+        margin-top: 15%;
+    } */
+/* } */
+
+/* Extra small devices (phones, 600px and down)
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: gold;
+    }
+
+    .form__details__side{
+        margin-top: 20%;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (min-width: 600px) {} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {} */
